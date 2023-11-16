@@ -1,3 +1,5 @@
+import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
+import { SearchIcon } from '@chakra-ui/icons'
 import React, { useState } from 'react';
 
 const SearchBar = ({onSearch}) => {
@@ -9,7 +11,12 @@ const SearchBar = ({onSearch}) => {
   };
 
   return (
-    <input type="text" value={input} onChange={handleInputChange} />
+    <InputGroup>
+    <InputLeftElement pointerEvents='none'>
+      <SearchIcon />
+    </InputLeftElement>
+    <Input bgColor="Grey.900" type="text" value={input} onChange={handleInputChange} borderColor="Grey.700" />
+  </InputGroup>
   );
 };
 
