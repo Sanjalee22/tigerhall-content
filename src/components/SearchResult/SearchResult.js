@@ -32,7 +32,7 @@ const SearchResult = ({ keyword }) => {
     useEffect(() => {
         const handleScroll = () => {
             if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight) return;
-            loadMorePodcasts();
+            loadMorePodcasts(); //this will only be called when scroll reaches at the bottom.
         };
 
         window.addEventListener('scroll', handleScroll);
