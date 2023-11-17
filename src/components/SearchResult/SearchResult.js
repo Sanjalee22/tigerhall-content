@@ -38,7 +38,7 @@ const SearchResult = ({ keyword }) => {
         window.addEventListener('scroll', handleScroll);
 
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [data]);
+    }, [data, loadMorePodcasts]);
 
     return (
         <Flex gap={4} flexDirection="column" marginTop={4} >

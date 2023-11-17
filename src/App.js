@@ -1,23 +1,16 @@
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { ApolloProvider } from '@apollo/client';
+import { Flex } from '@chakra-ui/react';
 import SearchBar from './components/SearchBar/SearchBar';
 import SearchResult from './components/SearchResult/SearchResult';
 import client from './apiConfig';
-import { Flex, useColorMode } from '@chakra-ui/react';
 import { debounce } from './utils';
 
 
 function App() {
   const [searchKeyword, setSearchKeyword] = useState('')
-  const { colorMode, toggleColorMode } = useColorMode();
 
-  useEffect(() => {
-    if (colorMode === "dark") {
-      toggleColorMode();
-    }
-  }, []);
-  
   const handleSearch = debounce((keyword) => {
     setSearchKeyword(keyword)
   }, 300)
