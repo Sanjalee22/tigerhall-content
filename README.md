@@ -27,4 +27,4 @@ Launches the test runner in the interactive watch mode.
 2. React Context can be used for state management and to avoid prop drilling. But since this is a small app which only reads data from the API, context API can be avoided for simplicity.
 3. Only implemented the mobile web view of the app. The styles need to be updated to accommodate the large screen (laptop browser) views in an aesthetic fashion.
 4. Written unit tests for all the components except the SearchResult component because due to limited knowledge on Graph QL API and how to mock them. The tests can be added in future.
-5. Some tests might fail. They need to be updated with element selectors other than data-test-id. (Tried to avoid using data-test-id as a best practice recommendation) 
+5. Some failing tests are commented. They need to be updated with element selectors other than data-test-id. (To avoid using data-test-id as a best practice) 
