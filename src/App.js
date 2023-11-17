@@ -24,7 +24,7 @@ function App() {
 
   return (
     <ApolloProvider client={client}>
-      <Flex width='100%' direction={'column'} backgroundColor="Teal.1000" px={12} py={6}>      
+      <Flex width='100%' minHeight="100vh" direction={'column'} backgroundColor="Teal.1000" px={12} py={6}>      
           <SearchBar onSearch={handleSearch} />
           <SearchResult keyword={searchKeyword} />
       </Flex>
