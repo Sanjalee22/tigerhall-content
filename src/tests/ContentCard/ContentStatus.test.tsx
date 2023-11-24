@@ -4,7 +4,7 @@ import '@testing-library/jest-dom';
 import ContentStatus from '../../components/ContentCard/ContentStatus';
 
 describe('ContentStatus Component', () => {
-    const mockProps = {
+    const mockProps: ContentStatusProps = {
         uri: 'test-uri',
         completionPercentage: 75,
         durationMinutes: 30

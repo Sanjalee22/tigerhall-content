@@ -1,10 +1,11 @@
+import React from 'react';
 import { Box, Flex} from "@chakra-ui/react"
 import ContentInformation from "./ContentInformation"
 import ContentStatus from "./ContentStatus"
 import ProgressBar from "./ProgressBar"
 import ShareControls from "./ShareControls"
 
-const ContentCard = ({ edge }) => {
+const ContentCard: React.FC<ContentCardProps> = ({ edge }) => {
 
     return (
         <Box height="272px" borderRadius="8px" backgroundColor="White.1000">

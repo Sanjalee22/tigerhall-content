@@ -1,6 +1,7 @@
+import React from 'react';
 import { Flex, Text } from "@chakra-ui/react"
 
-const ContentInformation = ({ category, name, expertFirstName, expertLastName, expertTitle }) => {
+const ContentInformation: React.FC<ContentInformationProps> = ({ category, name, expertFirstName, expertLastName, expertTitle }) => {
     return (
         <Flex
             direction="column"

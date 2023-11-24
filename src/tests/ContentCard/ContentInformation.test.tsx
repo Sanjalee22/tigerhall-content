@@ -4,7 +4,7 @@ import '@testing-library/jest-dom';
 import ContentInformation from '../../components/ContentCard/ContentInformation';
 
 describe('ContentInformation Component', () => {
-    const mockProps = {
+    const mockProps: ContentInformationProps = {
         category: 'Technology',
         name: 'Introduction to React',
         expertFirstName: 'Jane',
@@ -24,8 +24,11 @@ describe('ContentInformation Component', () => {
         const expertNameElement = screen.getByText(`${mockProps.expertFirstName} ${mockProps.expertLastName}`);
         expect(expertNameElement).toBeInTheDocument();
 
-        const expertTitleElement = screen.getByText(mockProps.expertTitle);
-        expect(expertTitleElement).toBeInTheDocument();
+        if(mockProps.expertTitle){
+            const expertTitleElement: HTMLElement | undefined = screen.getByText(mockProps.expertTitle);
+            expect(expertTitleElement).toBeInTheDocument();
+        }
+        
     });
 
     it('displays a default title if no expertTitle is provided', () => {

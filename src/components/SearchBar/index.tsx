@@ -1,11 +1,11 @@
+import React, { useState, ChangeEvent } from 'react';
 import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
 import { SearchIcon } from '@chakra-ui/icons'
-import React, { useState } from 'react';
 
-const SearchBar = ({ onSearch }) => {
-    const [input, setInput] = useState('');
+const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
+    const [input, setInput] = useState<string>('');
 
-    const handleInputChange = (e) => {
+    const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
         setInput(e.target.value);
         onSearch(e.target.value)
     };

@@ -1,6 +1,9 @@
+import React from 'react';
 import { Box } from "@chakra-ui/react"
 
-const ProgressBar = ({progressPercent}) => {
+
+
+const ProgressBar: React.FC<ProgressBarProps> = ({progressPercent}) => {
 
     return(
         <Box height="2px" backgroundColor="Grey.400">

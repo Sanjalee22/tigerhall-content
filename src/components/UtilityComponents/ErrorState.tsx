@@ -1,6 +1,7 @@
+import React from 'react';
 import { Flex, Text } from "@chakra-ui/react"
 
-const ErrorState = ({ errorText }) => {
+const ErrorState: React.FC<ErrorStateProps> = ({ errorText }) => {
     return (
         <Flex marginTop="200px" direction="column" gap="8px" alignItems="center">
             <Text sx={{ textStyle: 'xlFormulaHeader' }} color="Red.300">

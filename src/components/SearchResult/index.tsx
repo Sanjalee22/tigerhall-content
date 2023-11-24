@@ -1,12 +1,15 @@
 import React, { useEffect } from 'react';
 import { useQuery } from '@apollo/client';
-import ContentCard from '../ContentCard/ContentCard';
-import { Flex, Spinner } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 import GET_PODCASTS_QUERY from '../../queries/fetchPodcasts';
 import EmptyState from '../UtilityComponents/EmptyState';
 import ErrorState from '../UtilityComponents/ErrorState';
+import ContentList from './ContentList';
+import LoadingContent from '../UtilityComponents/LoadingState';
 
-const SearchResult = ({ keyword }) => {
+
+
+const SearchResult: React.FC<SearchResultProps> = ({ keyword }) => {
     const { loading, error, data, fetchMore } = useQuery(GET_PODCASTS_QUERY, {
         variables: { keyword: keyword, offset: 0 },
         notifyOnNetworkStatusChange: true,
@@ -45,43 +48,20 @@ const SearchResult = ({ keyword }) => {
             {
                 data?.contentCards?.edges?.length === 0
                     ?
-                       <EmptyState messageText="No videos found for the entered keyword."/>
+                    <EmptyState messageText="No videos found for the entered keyword." />
                     : error ?
-                        <ErrorState errorText="An error occured. Please reload."/>
-                    :
+                        <ErrorState errorText="An error occured. Please reload." />
+                        :
                         <ContentList items={data?.contentCards?.edges} />
             }
-            <LoadingContent loading={loading} />
+            <LoadingContent isVisible={loading} />
 
         </Flex>
     );
 };
 
-const LoadingContent = ({ loading }) => {
-    return (
-        <Flex
-            justifyContent="center"
-            alignItems="center"
-            visibility={loading ? 'visible' : 'hidden'}
-        >
-            <Spinner
-                thickness='4px'
-                speed='0.7s'
-                emptyColor='#00000014'
-                color='Orange.600'
-                size='xl'
-            />
-        </Flex>
-    )
-}
 
-const ContentList = ({ items }) => {
-    return (
-        items?.map((edge, index) => (
-            <ContentCard key={index} edge={edge} />
-        ))
-    )
-}
+
 
 export default SearchResult;
 

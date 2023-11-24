@@ -1,3 +1,4 @@
+import React from 'react';
 import { Flex, Icon } from "@chakra-ui/react"
 import { ReactComponent as ShareIcon } from '../../assets/icons/Share.svg';
 import { ReactComponent as BookmarkIcon } from '../../assets/icons/Bookmark.svg';

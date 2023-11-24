@@ -1,17 +1,16 @@
-
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { ApolloProvider } from '@apollo/client';
 import { Flex } from '@chakra-ui/react';
-import SearchBar from './components/SearchBar/SearchBar';
-import SearchResult from './components/SearchResult/SearchResult';
+import SearchBar from './components/SearchBar';
+import SearchResult from './components/SearchResult';
 import client from './apiConfig';
 import { debounce } from './utils';
 
 
 function App() {
-  const [searchKeyword, setSearchKeyword] = useState('')
+  const [searchKeyword, setSearchKeyword] = useState<string>('')
 
-  const handleSearch = debounce((keyword) => {
+  const handleSearch = debounce((keyword: string) => {
     setSearchKeyword(keyword)
   }, 300)
 
