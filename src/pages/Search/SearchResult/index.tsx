@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react';
 import { useQuery } from '@apollo/client';
 import { Flex } from '@chakra-ui/react';
-import GET_PODCASTS_QUERY from '../../queries/fetchPodcasts';
-import EmptyState from '../UtilityComponents/EmptyState';
-import ErrorState from '../UtilityComponents/ErrorState';
+import GET_PODCASTS_QUERY from '../../../queries/fetchPodcasts';
 import ContentList from './ContentList';
-import LoadingContent from '../UtilityComponents/LoadingState';
-
-
+import EmptyState from '../../../components/EmptyState';
+import ErrorState from '../../../components/ErrorState';
+import LoadingContent from '../../../components/LoadingState';
+import { EMPTY_RESULT, ERROR_GENERAL } from '../../../utils/constants';
 
 const SearchResult: React.FC<SearchResultProps> = ({ keyword }) => {
     const { loading, error, data, fetchMore } = useQuery(GET_PODCASTS_QUERY, {
@@ -48,9 +47,9 @@ const SearchResult: React.FC<SearchResultProps> = ({ keyword }) => {
             {
                 data?.contentCards?.edges?.length === 0
                     ?
-                    <EmptyState messageText="No videos found for the entered keyword." />
+                    <EmptyState messageText={EMPTY_RESULT} />
                     : error ?
-                        <ErrorState errorText="An error occured. Please reload." />
+                        <ErrorState messageText={ERROR_GENERAL} />
                         :
                         <ContentList items={data?.contentCards?.edges} />
             }

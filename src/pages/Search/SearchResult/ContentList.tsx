@@ -1,7 +1,6 @@
 import React from 'react';
 import ContentCard from '../ContentCard';
 
-
 const ContentList: React.FC<ContentListProps> = ({ items }) => {
     return (
         <>

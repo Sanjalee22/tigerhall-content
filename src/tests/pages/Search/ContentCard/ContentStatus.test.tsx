@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ContentStatus from '../../components/ContentCard/ContentStatus';
+import ContentStatus from '../../../../pages/Search/ContentCard/ContentStatus';
 
 describe('ContentStatus Component', () => {
     const mockProps: ContentStatusProps = {

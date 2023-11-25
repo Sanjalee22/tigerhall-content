@@ -13,7 +13,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
     return (
         <InputGroup>
             <InputLeftElement pointerEvents='none'>
-                <SearchIcon color="White.1000"/>
+                <SearchIcon color="White.1000" />
             </InputLeftElement>
             <Input
                 value={input}

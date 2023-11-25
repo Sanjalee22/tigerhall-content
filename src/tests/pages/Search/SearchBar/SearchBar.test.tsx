@@ -1,11 +1,11 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import SearchBar from '../../components/SearchBar'; 
+import SearchBar from '../../../../pages/Search/SearchBar';
 
 describe('SearchBar Component', () => {
     it('renders the search input', () => {
-        render(<SearchBar onSearch={() => {}} />);
+        render(<SearchBar onSearch={() => { }} />);
         const inputElement = screen.getByRole('textbox') as HTMLInputElement;
         expect(inputElement).toBeInTheDocument();
     });
@@ -19,7 +19,7 @@ describe('SearchBar Component', () => {
     });
 
     it('updates input value on change', () => {
-        render(<SearchBar onSearch={() => {}} />);
+        render(<SearchBar onSearch={() => { }} />);
         const inputElement = screen.getByRole('textbox') as HTMLInputElement;
         fireEvent.change(inputElement, { target: { value: 'new value' } });
         expect(inputElement.value).toBe('new value');

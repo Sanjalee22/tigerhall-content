@@ -1,12 +1,11 @@
 import React from 'react';
 import { Flex, Text, Icon } from "@chakra-ui/react"
-import { ReactComponent as CompletionStatus } from '../../assets/icons/Vector.svg';
-import { ReactComponent as Headphones } from '../../assets/icons/Headphones.svg';
-import { ReactComponent as Time } from '../../assets/icons/Time.svg';
-import { editImageUri } from "../../utils";
+import { ReactComponent as CompletionStatus } from '../../../assets/icons/Vector.svg';
+import { ReactComponent as Headphones } from '../../../assets/icons/Headphones.svg';
+import { ReactComponent as Time } from '../../../assets/icons/Time.svg';
+import { editImageUri } from '../../../utils/helper';
 
-const ContentStatus:React.FC<ContentStatusProps> = ({ uri, completionPercentage, durationMinutes }) => {
-
+const ContentStatus: React.FC<ContentStatusProps> = ({ uri, completionPercentage, durationMinutes }) => {
     return (
         <Flex
             bgImage={editImageUri(uri)}

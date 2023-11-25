@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ProgressBar from '../../components/ContentCard/ProgressBar';
+import ProgressBar from '../../../../pages/Search/ContentCard/ProgressBar';
 
 describe('ProgressBar Component', () => {
     const mockProps: ContentInformationProps = {

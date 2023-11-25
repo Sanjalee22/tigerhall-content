@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ContentInformation from '../../components/ContentCard/ContentInformation';
+import ContentInformation from '../../../../pages/Search/ContentCard/ContentInformation';
 
 describe('ContentInformation Component', () => {
     const mockProps: ContentInformationProps = {
@@ -24,11 +24,11 @@ describe('ContentInformation Component', () => {
         const expertNameElement = screen.getByText(`${mockProps.expertFirstName} ${mockProps.expertLastName}`);
         expect(expertNameElement).toBeInTheDocument();
 
-        if(mockProps.expertTitle){
+        if (mockProps.expertTitle) {
             const expertTitleElement: HTMLElement | undefined = screen.getByText(mockProps.expertTitle);
             expect(expertTitleElement).toBeInTheDocument();
         }
-        
+
     });
 
     it('displays a default title if no expertTitle is provided', () => {

@@ -1,9 +1,6 @@
 import { Flex, Spinner } from "@chakra-ui/react"
 import React from "react"
-
-interface LoadingContentProps {
-    isVisible: boolean
-}
+import { LoadingContentProps } from "./types"
 
 const LoadingContent: React.FC<LoadingContentProps> = ({ isVisible }) => {
     return (
