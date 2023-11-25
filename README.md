@@ -8,6 +8,10 @@ In the project directory, you can run:
 
 To install the dependencies.
 
+### `tsc`
+
+To compile the typescript to javascript
+
 ### `npm start`
 
 Runs the app in the development mode.
@@ -23,8 +27,20 @@ Launches the test runner in the interactive watch mode.
 ![User Flow Diagram drawio](https://github.com/Sanjalee22/tigerhall-content/assets/34329090/31ffcb20-45a3-4286-a5ad-9194f785d3da)
 
 ## Project Structure
-<img width="346" alt="image" src="https://github.com/Sanjalee22/tigerhall-content/assets/34329090/d7b41046-b6bb-4892-aad4-bea8211491b3">
+<img width="289" alt="image" src="https://github.com/Sanjalee22/tigerhall-content/assets/34329090/f8369c7c-20c3-4b20-b654-6a1fa7551ff3">
+<img width="289" alt="image" src="https://github.com/Sanjalee22/tigerhall-content/assets/34329090/2fe56962-02f1-4fbf-8bf1-c2dbe017f904">
 
+
+Folder description:
+assets: contains images and icons
+components: contains utility components which can be used anywhere in the app.
+globalTypes: contains global type declarations
+pages: contains components related to specific routes. Each route is a folder inside this folder.
+queries: contains GraphQL queries
+tests: contains test files. This folder resembles the structure of the app.
+utils: contains files for defining helper functions and constants.
+
+Rest of the files are self explanatory.
 
 ## Design Choices and Future Scope
 1. Used Chakra UI for basic components like flexbox, input etc.
