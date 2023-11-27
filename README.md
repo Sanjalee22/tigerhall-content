@@ -27,8 +27,9 @@ Launches the test runner in the interactive watch mode.
 ![User Flow Diagram drawio](https://github.com/Sanjalee22/tigerhall-content/assets/34329090/31ffcb20-45a3-4286-a5ad-9194f785d3da)
 
 ## Project Structure
-<img width="289" alt="image" src="https://github.com/Sanjalee22/tigerhall-content/assets/34329090/f8369c7c-20c3-4b20-b654-6a1fa7551ff3">
-<img width="289" alt="image" src="https://github.com/Sanjalee22/tigerhall-content/assets/34329090/2fe56962-02f1-4fbf-8bf1-c2dbe017f904">
+<img width="283" alt="image" src="https://github.com/Sanjalee22/tigerhall-content/assets/34329090/ccfabb97-5187-4445-9ce5-81cffd6d3275">
+
+<img width="283" alt="image" src="https://github.com/Sanjalee22/tigerhall-content/assets/34329090/73bf1d6c-951e-49b3-b148-0bec6b478567">
 
 
 ### Folder description:
@@ -37,7 +38,7 @@ contains images and icons
 ### components: 
 contains utility components which can be used anywhere in the app.
 ### globalTypes: 
-contains global type declarations
+contains global type declarations files: .d.ts
 ### pages: 
 contains components related to specific routes. Each route is a folder inside this folder.
 ### queries: 
