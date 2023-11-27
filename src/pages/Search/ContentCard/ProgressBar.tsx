@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box } from "@chakra-ui/react"
+import { ProgressBarProps } from '../search.types';
 
 const ProgressBar: React.FC<ProgressBarProps> = ({ progressPercent }) => {
     return (

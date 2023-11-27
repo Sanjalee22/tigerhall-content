@@ -1,4 +1,4 @@
-interface EdgeType {
+export interface EdgeType {
   image: {
     uri: string;
   };
@@ -13,7 +13,7 @@ interface EdgeType {
   }>;
 }
 
-interface ContentInformationProps {
+export interface ContentInformationProps {
   category: string,
   name: string,
   expertFirstName: string,
@@ -21,28 +21,28 @@ interface ContentInformationProps {
   expertTitle?: string
 }
 
-interface ContentStatusProps {
+export interface ContentStatusProps {
   uri: string,
   completionPercentage: number,
   durationMinutes: number
 }
 
-interface ContentCardProps {
+export interface ContentCardProps {
   edge: EdgeType;
 }
 
-interface ProgressBarProps {
+export interface ProgressBarProps {
   progressPercent: number;
 }
 
-interface SearchBarProps {
+export interface SearchBarProps {
   onSearch: (value: string) => void;
 }
 
-interface SearchResultProps {
+export interface SearchResultProps {
   keyword: string
 }
 
-interface ContentListProps {
+export interface ContentListProps {
   items: EdgeType[]
 }

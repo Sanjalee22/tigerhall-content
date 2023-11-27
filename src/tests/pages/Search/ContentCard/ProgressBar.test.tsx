@@ -1,16 +1,9 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ProgressBar from '../../../../pages/Search/ContentCard/ProgressBar';
 
 describe('ProgressBar Component', () => {
-    const mockProps: ContentInformationProps = {
-        category: 'Technology',
-        name: 'Introduction to React',
-        expertFirstName: 'Jane',
-        expertLastName: 'Doe',
-        expertTitle: 'Senior Developer'
-    };
 
     it('renders correctly', () => {
         render(<ProgressBar progressPercent={50} />);

@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, Text } from "@chakra-ui/react"
 import StatusContainer from './StatusContainer';
 import Error from "../assets/images/Error.png"
-import { StatusMessage } from './types';
+import { StatusMessage } from './components.type';
 
 const ErrorState: React.FC<StatusMessage> = ({ messageText }) => {
     return (

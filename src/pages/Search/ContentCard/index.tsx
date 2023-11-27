@@ -4,6 +4,7 @@ import ContentInformation from "./ContentInformation"
 import ContentStatus from "./ContentStatus"
 import ProgressBar from "./ProgressBar"
 import ShareControls from "./ShareControls"
+import { ContentCardProps } from '../search.types';
 
 const ContentCard: React.FC<ContentCardProps> = ({ edge }) => {
 

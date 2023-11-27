@@ -6,7 +6,8 @@ import ContentList from './ContentList';
 import EmptyState from '../../../components/EmptyState';
 import ErrorState from '../../../components/ErrorState';
 import LoadingContent from '../../../components/LoadingState';
-import { EMPTY_RESULT, ERROR_GENERAL } from '../../../utils/constants';
+import { ERROR_GENERAL } from '../../../utils/constants';
+import { SearchResultProps } from '../search.types';
 
 const SearchResult: React.FC<SearchResultProps> = ({ keyword }) => {
     const { loading, error, data, fetchMore } = useQuery(GET_PODCASTS_QUERY, {
@@ -47,7 +48,7 @@ const SearchResult: React.FC<SearchResultProps> = ({ keyword }) => {
             {
                 data?.contentCards?.edges?.length === 0
                     ?
-                    <EmptyState messageText={EMPTY_RESULT} />
+                    <EmptyState messageText="No videos found for the entered keyword." />
                     : error ?
                         <ErrorState messageText={ERROR_GENERAL} />
                         :

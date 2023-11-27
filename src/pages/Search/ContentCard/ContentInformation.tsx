@@ -1,5 +1,6 @@
 import React from 'react';
 import { Flex, Text } from "@chakra-ui/react"
+import { ContentInformationProps } from '../search.types';
 
 const ContentInformation: React.FC<ContentInformationProps> = ({ category, name, expertFirstName, expertLastName, expertTitle }) => {
     return (

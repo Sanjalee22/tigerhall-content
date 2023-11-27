@@ -4,6 +4,7 @@ import { ReactComponent as CompletionStatus } from '../../../assets/icons/Vector
 import { ReactComponent as Headphones } from '../../../assets/icons/Headphones.svg';
 import { ReactComponent as Time } from '../../../assets/icons/Time.svg';
 import { editImageUri } from '../../../utils/helper';
+import { ContentStatusProps } from '../search.types';
 
 const ContentStatus: React.FC<ContentStatusProps> = ({ uri, completionPercentage, durationMinutes }) => {
     return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Flex } from "@chakra-ui/react"
-import { StatusContainerProps } from './types';
+import { StatusContainerProps } from './components.type';
 
 const StatusContainer: React.FC<StatusContainerProps> = ({ children }) => {
     return (

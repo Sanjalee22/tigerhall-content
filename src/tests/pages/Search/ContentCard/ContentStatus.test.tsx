@@ -2,6 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ContentStatus from '../../../../pages/Search/ContentCard/ContentStatus';
+import { ContentStatusProps } from '../../../../pages/Search/search.types';
 
 describe('ContentStatus Component', () => {
     const mockProps: ContentStatusProps = {
